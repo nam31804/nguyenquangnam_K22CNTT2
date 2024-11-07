@@ -1,0 +1,50 @@
+﻿@model NguyenQuangNamK22CNTT2.Models.donhang
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>donhang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ngay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trangthai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.khachhang.khachhang_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.khachhang.khachhang_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.donhang_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

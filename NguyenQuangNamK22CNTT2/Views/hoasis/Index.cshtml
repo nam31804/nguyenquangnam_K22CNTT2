@@ -1,0 +1,40 @@
+﻿@model IEnumerable<NguyenQuangNamK22CNTT2.Models.hoasi>
+<link href="~/Scripts/all.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tiểu sử thông tin của các hoạ sĩ</h2>
+<div class="table-container">
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Tên Hoạ Sĩ</th>
+                <th>Chân dung</th>
+                <th>Tiểu Sử</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.hoasi_name)</td>
+                    <td><img src="~/images/@item.ImagePath" alt="anh" style="width:100px; height:auto;" /></td>
+                    <td>@Html.DisplayFor(modelItem => item.bio)</td>
+                    <td>
+                        @Html.ActionLink("Sửa", "Edit", new { id = item.hoasi_id }, new { @class = "btn btn-warning btn-sm" })
+                        @Html.ActionLink("Xoá", "Delete", new { id = item.hoasi_id }, new { @class = "btn btn-danger btn-sm" })
+                        @Html.ActionLink("Chi tiết", "Details", new { id = item.hoasi_id }, new { @class = "btn btn-info btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>
+        @Html.ActionLink("Thêm mới", "Create", "hoasis", new { @class = "btn-add-new" })
+    </p>
+
+
+
+</div>

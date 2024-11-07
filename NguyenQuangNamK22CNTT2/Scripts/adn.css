@@ -1,0 +1,70 @@
+﻿/* Căn giữa form đăng nhập và làm form to hơn */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px; /* Tăng độ rộng của form */
+    background: #ffffff;
+    padding: 40px; /* Tăng khoảng cách padding cho form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ để form nổi bật */
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Tiêu đề */
+h2 {
+    color: #333;
+    font-size: 28px; /* Tăng kích thước tiêu đề */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Ô nhập liệu */
+.form-control {
+    font-size: 16px; /* Tăng kích thước font chữ */
+    padding: 12px; /* Tăng khoảng cách padding trong ô nhập liệu */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Nút đăng nhập */
+.btn-primary {
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    padding: 12px; /* Tăng kích thước nút đăng nhập */
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+/* Thông báo lỗi */
+.text-danger {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: -10px; /* Đặt thông báo lỗi gần hơn với trường bị lỗi */
+}
+
+/* Đặt nhãn form to hơn và căn chỉnh */
+label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<NguyenQuangNamK22CNTT2.Models.giohang>
+<link href="~/Scripts/all.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Giỏ hàng</h2>
+<div class="table-container">
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Số lượng
+                </th>
+                <th>
+                    Tên Người Mua
+                </th>
+                <th>
+                    Mã Sản Phẩm
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.soluong)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.khachhang.khachhang_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sanpham.tieude)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Sửa", "Edit", new { id = item.giohang_id }, new { @class = "btn btn-warning btn-sm" })
+                        @Html.ActionLink("Xoá", "Delete", new { id = item.giohang_id }, new { @class = "btn btn-danger btn-sm" })
+                        @Html.ActionLink("Chi tiết", "Details", new { id = item.giohang_id }, new { @class = "btn btn-info btn-sm" })
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <p>
+        @Html.ActionLink("Create New", "Create", "giohangs", new { @class = "btn-add-new" })
+    </p>
+</div>

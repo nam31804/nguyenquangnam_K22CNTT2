@@ -1,0 +1,77 @@
+﻿@model IEnumerable<NguyenQuangNamK22CNTT2.Models.khachhang>
+<link href="~/Scripts/all.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Thông tin khách hàng</h2>
+<div class="table-container">
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Họ Và Tên
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Tài Khoản
+                </th>
+                <th>
+                    Mật Khẩu
+                </th>
+                <th>
+                    Ngày Sinh
+                </th>
+                <th>
+                    Địa Chỉ
+                </th>
+                <th>
+                    Số Điền Thoại
+                </th>
+                <th>
+                    Ảnh
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.khachhang_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.taikhoan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.matkhau)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ngaysinh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.diachi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SDT)
+                    </td>
+                    <td><img src="~/images/@item.img" alt="anh" style="width:100px; height:auto;" /></td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.khachhang_id }, new { @class = "btn btn-warning btn-sm"}) 
+                        @Html.ActionLink("Details", "Details", new { id = item.khachhang_id }, new { @class = "btn btn-danger btn-sm"}) 
+                        @Html.ActionLink("Delete", "Delete", new { id = item.khachhang_id }, new { @class = "btn btn-info btn-sm"})
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>
+        @Html.ActionLink("Create New", "Create", "khachangs", new { @class = "btn-add-new" })
+    </p>
+</div>

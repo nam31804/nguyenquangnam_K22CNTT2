@@ -1,0 +1,66 @@
+﻿/* Thiết lập nền cho form */
+.form-horizontal {
+    background-color: #f8f9fa; /* Nền sáng */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Tiêu đề form */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cải tiến style cho các label */
+.control-label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Cải tiến các input và select */
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    /* Các input khi focus */
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+/* Cải tiến validation message */
+.text-danger {
+    color: red;
+    font-size: 12px;
+}
+
+/* Style cho nút submit */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+/* Thêm margin cho các ô input */
+.form-group {
+    margin-bottom: 15px;
+}

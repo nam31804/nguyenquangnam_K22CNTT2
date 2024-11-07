@@ -1,0 +1,48 @@
+﻿@model IEnumerable<NguyenQuangNamK22CNTT2.Models.sanpham>
+
+<link href="~/Scripts/all.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <img src="~/images/32.jpg" alt="Trang chủ hình ảnh" style="width: 100%; height: auto; />
+</div>
+<h2>Chào mừng bạn đến với thế giới hội hoạ</h2>
+
+<div class="table-container">
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Mã Sản Phẩm</th>
+                <th>Mô Tả</th>
+                <th>Giá</th>
+                <th>Tác Phẩm</th>
+                <th>Hoạ Sĩ</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.tieude)</td>
+                    <td>@Html.DisplayFor(modelItem => item.mota)</td>
+                    <td>@Html.DisplayFor(modelItem => item.gia)</td>
+                    <td><img src="~/images/@item.image_url" alt="anh" style="width:100px; height:auto;" /></td>
+                    <td>@Html.DisplayFor(modelItem => item.hoasi.hoasi_name)</td>
+                    <td>
+                        @Html.ActionLink("Sửa", "Edit", new { id = item.tranhve_id }, new { @class = "btn btn-warning btn-sm" })
+                        @Html.ActionLink("Xoá", "Delete", new { id = item.tranhve_id }, new { @class = "btn btn-danger btn-sm" })
+                        @Html.ActionLink("Thông Tin", "Details", new { id = item.tranhve_id }, new { @class = "btn btn-info btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "tranhves", new { @class = "btn-add-new" })
+</p>

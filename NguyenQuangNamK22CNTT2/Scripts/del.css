@@ -1,0 +1,73 @@
+﻿/* dk.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.delete-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.dl-horizontal dt {
+    font-weight: bold;
+    width: 150px;
+}
+
+.dl-horizontal dd {
+    margin-left: 160px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .form-actions button,
+    .form-actions a {
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+    .btn-danger:hover, .btn-secondary:hover {
+        opacity: 0.8;
+    }
+
+.hr {
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}

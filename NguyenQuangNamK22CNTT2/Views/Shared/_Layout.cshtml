@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Nguyen Quang Nam</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Scripts/a1.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="nobody">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                @Html.ActionLink("Nam31804", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>@Html.ActionLink("Hoạ Sĩ", "index", "hoasis", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Sản Phẩm", "index", "sanphams", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Đơn Hàng", "index", "donhangs", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Giỏ Hàng", "index", "giohangs", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Khách Hàng", "index", "khachhangs", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+
+                    <!-- Thêm phần "Đăng nhập/Đăng ký" bên phải -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Login", "khachhangs")">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Create", "khachhangs")">Đăng ký</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Nguyen Quang Nam-2210900048</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

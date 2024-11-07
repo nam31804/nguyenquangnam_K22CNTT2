@@ -1,0 +1,49 @@
+﻿@model NguyenQuangNamK22CNTT2.Models.khachhang
+<link href="~/Scripts/dk.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Xác nhận xóa khách hàng";
+}
+
+<h2 class="text-center">Xác nhận xóa khách hàng</h2>
+
+<h3 class="text-center text-danger">Bạn có chắc chắn muốn xóa khách hàng này không?</h3>
+
+<div class="delete-container">
+    <h4>Thông tin khách hàng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Tên Khách Hàng</dt>
+        <dd>@Html.DisplayFor(model => model.khachhang_name)</dd>
+
+        <dt>Email</dt>
+        <dd>@Html.DisplayFor(model => model.email)</dd>
+
+        <dt>Tài Khoản</dt>
+        <dd>@Html.DisplayFor(model => model.taikhoan)</dd>
+
+        <dt>Mật Khẩu</dt>
+        <dd>@Html.DisplayFor(model => model.matkhau)</dd>
+
+        <dt>Ngày Sinh</dt>
+        <dd>@Html.DisplayFor(model => model.ngaysinh)</dd>
+
+        <dt>Địa Chỉ</dt>
+        <dd>@Html.DisplayFor(model => model.diachi)</dd>
+
+        <dt>SĐT</dt>
+        <dd>@Html.DisplayFor(model => model.SDT)</dd>
+
+        <dt>Ảnh</dt>
+        <dd>@Html.DisplayFor(model => model.img)</dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions">
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            @Html.ActionLink("Quay lại danh sách", "Index", new { @class = "btn btn-secondary" })
+        </div>
+    }
+</div>

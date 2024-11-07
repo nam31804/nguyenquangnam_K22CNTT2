@@ -1,0 +1,37 @@
+﻿@model NguyenQuangNamK22CNTT2.Models.donhang
+<link href="~/Scripts/del.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Xác nhận xóa đơn hàng";
+}
+
+<h2 class="text-center">Xác nhận xóa đơn hàng</h2>
+
+<h3 class="text-center text-danger">Bạn có chắc chắn muốn xóa đơn hàng này không?</h3>
+
+<div class="delete-container">
+    <h4>Thông tin đơn hàng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Ngày Đặt</dt>
+        <dd>@Html.DisplayFor(model => model.ngay)</dd>
+
+        <dt>Tổng Tiền</dt>
+        <dd>@Html.DisplayFor(model => model.tong)</dd>
+
+        <dt>Trạng Thái</dt>
+        <dd>@Html.DisplayFor(model => model.trangthai)</dd>
+
+        <dt>Khách Hàng</dt>
+        <dd>@Html.DisplayFor(model => model.khachhang.khachhang_name)</dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions">
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            @Html.ActionLink("Quay lại danh sách", "Index", new { @class = "btn btn-secondary" })
+        </div>
+    }
+</div>

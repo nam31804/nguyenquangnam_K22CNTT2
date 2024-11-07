@@ -1,0 +1,33 @@
+﻿@model NguyenQuangNamK22CNTT2.Models.giohang
+
+@{
+    ViewBag.Title = "Xác nhận xóa giỏ hàng";
+}
+
+<h2 class="text-center">Xác nhận xóa giỏ hàng</h2>
+
+<h3 class="text-center text-danger">Bạn có chắc chắn muốn xóa giỏ hàng này không?</h3>
+
+<div class="delete-container">
+    <h4>Thông tin giỏ hàng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Khách hàng</dt>
+        <dd>@Html.DisplayFor(model => model.khachhang_id)</dd>
+
+        <dt>Sản phẩm</dt>
+        <dd>@Html.DisplayFor(model => model.tranhve_id)</dd>
+
+        <dt>Số lương</dt>
+        <dd>@Html.DisplayFor(model => model.soluong)</dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions">
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            @Html.ActionLink("Quay lại danh sách", "Index", new { @class = "btn btn-secondary" })
+        </div>
+    }
+</div>

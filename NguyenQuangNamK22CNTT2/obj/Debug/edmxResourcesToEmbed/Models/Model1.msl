@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NguyenQuangNamK22CNTT2ModelStoreContainer" CdmEntityContainer="NguyenQuangNamK22CNTT2Entities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.admin">
+        <MappingFragment StoreEntitySet="admins">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ctdonhangs">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.ctdonhang">
+        <MappingFragment StoreEntitySet="ctdonhang">
+          <ScalarProperty Name="orderdetails_id" ColumnName="orderdetails_id" />
+          <ScalarProperty Name="donhang_id" ColumnName="donhang_id" />
+          <ScalarProperty Name="tranhve_id" ColumnName="tranhve_id" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="donhangs">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.donhang">
+        <MappingFragment StoreEntitySet="donhang">
+          <ScalarProperty Name="donhang_id" ColumnName="donhang_id" />
+          <ScalarProperty Name="khachhang_id" ColumnName="khachhang_id" />
+          <ScalarProperty Name="ngay" ColumnName="ngay" />
+          <ScalarProperty Name="tong" ColumnName="tong" />
+          <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="giohangs">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.giohang">
+        <MappingFragment StoreEntitySet="giohang">
+          <ScalarProperty Name="giohang_id" ColumnName="giohang_id" />
+          <ScalarProperty Name="khachhang_id" ColumnName="khachhang_id" />
+          <ScalarProperty Name="tranhve_id" ColumnName="tranhve_id" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hoasis">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.hoasi">
+        <MappingFragment StoreEntitySet="hoasi">
+          <ScalarProperty Name="hoasi_id" ColumnName="hoasi_id" />
+          <ScalarProperty Name="hoasi_name" ColumnName="hoasi_name" />
+          <ScalarProperty Name="bio" ColumnName="bio" />
+          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="khachhangs">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.khachhang">
+        <MappingFragment StoreEntitySet="khachhang">
+          <ScalarProperty Name="khachhang_id" ColumnName="khachhang_id" />
+          <ScalarProperty Name="khachhang_name" ColumnName="khachhang_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sanphams">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.sanpham">
+        <MappingFragment StoreEntitySet="sanpham">
+          <ScalarProperty Name="tranhve_id" ColumnName="tranhve_id" />
+          <ScalarProperty Name="hoasi_id" ColumnName="hoasi_id" />
+          <ScalarProperty Name="tieude" ColumnName="tieude" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="image_url" ColumnName="image_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="theloais">
+      <EntityTypeMapping TypeName="NguyenQuangNamK22CNTT2Model.theloai">
+        <MappingFragment StoreEntitySet="theloai">
+          <ScalarProperty Name="theloai_id" ColumnName="theloai_id" />
+          <ScalarProperty Name="theloai_name" ColumnName="theloai_name" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="phanloai" TypeName="NguyenQuangNamK22CNTT2Model.phanloai" StoreEntitySet="phanloai">
+      <EndProperty Name="theloai">
+        <ScalarProperty Name="theloai_id" ColumnName="theloai_id" />
+      </EndProperty>
+      <EndProperty Name="sanpham">
+        <ScalarProperty Name="tranhve_id" ColumnName="tranhve_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

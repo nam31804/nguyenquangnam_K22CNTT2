@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a94e8900f67b4616a16c52b0205450af" Name="Diagram1">
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.admin" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.ctdonhang" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.donhang" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.giohang" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.hoasi" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.khachhang" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.sanpham" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.sysdiagram" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NguyenQuangNamK22CNTT2Model.theloai" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="NguyenQuangNamK22CNTT2Model.FK__ctdonhang__donha__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="NguyenQuangNamK22CNTT2Model.FK__ctdonhang__tranh__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="NguyenQuangNamK22CNTT2Model.FK__donhang__khachha__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="NguyenQuangNamK22CNTT2Model.FK__giohang__khachha__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="NguyenQuangNamK22CNTT2Model.FK__giohang__tranhve__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="NguyenQuangNamK22CNTT2Model.FK__sanpham__hoasi_i__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="NguyenQuangNamK22CNTT2Model.phanloai" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

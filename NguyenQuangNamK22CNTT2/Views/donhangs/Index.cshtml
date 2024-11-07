@@ -1,0 +1,56 @@
+﻿@model IEnumerable<NguyenQuangNamK22CNTT2.Models.donhang>
+<link href="~/Scripts/all.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Chi tiết đơn hàng</h2>
+<div class="table-container">
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Ngày đặt
+                </th>
+                <th>
+                    Tổng
+                </th>
+                <th>
+                    Trạng thái
+                </th>
+                <th>
+                    Tên Người Mua
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ngay)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tong)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.trangthai)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.khachhang.khachhang_name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Sửa", "Edit", new { id = item.donhang_id }, new { @class = "btn btn-warning btn-sm" })
+                        @Html.ActionLink("Xoá", "Delete", new { id = item.donhang_id }, new { @class = "btn btn-danger btn-sm" })
+                        @Html.ActionLink("Thông Tin", "Details", new { id = item.donhang_id }, new { @class = "btn btn-info btn-sm" })
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <p>
+        @Html.ActionLink("Create New", "Create", "donhangs", new { @class = "btn-add-new" })
+    </p>
+</div>

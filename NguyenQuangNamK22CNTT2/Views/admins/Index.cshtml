@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NguyenQuangNamK22CNTT2.Models.admin>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="table-container">
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    admin
+                </th>
+                <th>
+                    password
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.password)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.admin_id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.admin_id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.admin_id })
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
